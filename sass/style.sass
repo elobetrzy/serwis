@@ -38,17 +38,10 @@ html
         color: black
         width: $jedna-piata
         background-color: $kolor
-        // text-align: center
-        // background:
-        // image: url("https://www.templatesbox.com/data/free.templates/images/logo/full.preview/1163870291x6b.jpg")
-        // size: $naw-wys
-        // repeat: no-repeat
+        @extend %nawigacja
         #logotyp
           +wymiary($naw-wys, $naw-wys)
           float: left
-
-
-        @extend %nawigacja
         #nazwa
           $wielkosc-nazwy: 2em
           display: inline-block
@@ -58,9 +51,32 @@ html
             size: $wielkosc-nazwy
             weight: bold
       #kategorie
+        $iloscelementow: 3
         width: $cztery-piate
-        background-color: rgb(85, 62, 194)
+        background-color: $bg
         @extend %nawigacja
+        .podzielenie
+          width: (100% / $iloscelementow)
+          height: $naw-wys
+          float: left
+          text-align: center
+          .menu
+            text-align: center
+            padding: 1.5em
+            a
+              text-align: center
+              color: $kolor
+              background-color: $dodatek
+              padding: 8px
+              font:
+                size: 1.8em
+                weight: bold
+              &:hover
+                background-color: lighten($dodatek, 25%)
+                color: invert($kolor)
+              &:active
+                background-color: darken($dodatek, 25%)
+                color: $kolor
       p
         margin: 0
     .container
