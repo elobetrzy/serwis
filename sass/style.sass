@@ -41,11 +41,15 @@ html
         float: left
         // padding: 20px
         width: $cztery-piate
-        background-color: rgb(123, 251, 95)
+        background-color: black
         .tytul
-          @extend %padding
           margin: 0 auto
-          color: black
+          color: white
+          $padding: 15px
+          padding:
+            top: $padding
+            left: $padding
+            right: $padding
           font:
             style: italic
             weight: bold
@@ -54,8 +58,22 @@ html
             transform: uppercase
             align: center
         .subtytul
-
+          margin: 0
+          padding: 15px
+          color: rgba(255, 255, 255, 0.6)
+          font:
+            style: italic
+            size: 1.3em
+            weight: bold
+          &::first-letter
+            text-transform: capitalize
+          &::first-line
+            color: rgba(255, 255, 255, 0.7)
         .artykul
+          &::first-letter
+            color: rgb(96, 215, 1)
+            text-transform: capitalize
+            font-size: 2.2em
 
         .o-autorze
 
