@@ -12,6 +12,9 @@ $naw-wys: 6em
 %nawigacja
   float: left
   height: $naw-wys
+=wymiary($wys, $szer)
+  height: $wys
+  width: $szer
 =kolory($c, $bcg)
   color: $c
   background-color: $bcg
@@ -229,7 +232,44 @@ html
         float: left
         width: $jedna-piata
         height: auto
-        background-color: rgb(249, 25, 160)
+        background-color: $bg
+        text-align: center
+        .podobneWpisy
+          color: $kolor
+          margin: 0 auto
+          font:
+            style: italic
+            weight: bold
+            size: 1.6em
+          text:
+            transform: uppercase
+            decoration: underline
+        div.podobne
+          $wysokosc-podobne: 7em
+          height: $wysokosc-podobne
+          width: $calosc
+          +kolory(white, black)
+          $szerokoscminiaturki: 45%
+          &:first-child
+            margin-top: 1em
+          div.miniaturka
+            width: $szerokoscminiaturki
+            height: $wysokosc-podobne
+            float: left
+            background-color: $bg
+            img
+              +wymiary(100%, 100%)
+          div.tytulPodobne
+            width: 100% - $szerokoscminiaturki
+            float: left
+            color: $kolor
+            text-align: center
+            padding: 1em 0
+            span
+              font:
+                size: 1.25em
+                weight: bold
+              text-decoration: underline
     #stopka
       background-color: rgb(161, 110, 80)
       // Stopka jest na ta sama wysokosc co gorna belka
