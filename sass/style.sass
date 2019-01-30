@@ -5,7 +5,7 @@ $ilekat: 5
 %wszedzie
   margin: 0 auto
 %padding
-  padding: 10px
+  padding: 15px
 $naw-wys: 4em
 %nawigacja
   float: left
@@ -15,6 +15,8 @@ html
   background-color: rgb(210, 196, 102)
   body
     margin: 0
+    .clear
+      clear: left
     #nawigacja
       height: $naw-wys
       width: $szer
@@ -35,7 +37,33 @@ html
       min-height: 15em
       width: $szer
       @extend %wszedzie
-      // @extend %padding
+      #artykul
+        float: left
+        // padding: 20px
+        width: $cztery-piate
+        background-color: rgb(123, 251, 95)
+        .tytul
+          @extend %padding
+          margin: 0 auto
+          color: black
+          font:
+            style: italic
+            weight: bold
+            size: 2.2em
+          text:
+            transform: uppercase
+            align: center
+        .subtytul
+
+        .artykul
+
+        .o-autorze
+
+      #podobne
+        float: left
+        width: $jedna-piata
+        height: auto
+        background-color: rgb(249, 25, 160)
     #stopka
       background-color: rgb(161, 110, 80)
       // Stopka jest na ta sama wysokosc co gorna belka
