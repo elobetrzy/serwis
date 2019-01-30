@@ -4,13 +4,17 @@ $szer: 80%
 $ilekat: 5
 %wszedzie
   margin: 0 auto
+%padding-bok
+  padding: 0 15px
 %padding
   padding: 15px
 $naw-wys: 4em
 %nawigacja
   float: left
   height: $naw-wys
-
+=kolory($c, $bcg)
+  color: $c
+  background-color: $bcg
 html
   background-color: rgb(210, 196, 102)
   body
@@ -69,6 +73,27 @@ html
             text-transform: capitalize
           &::first-line
             // color: green
+        .o-autorze
+          float: left
+          text-align: center
+          width: $jedna-trzecia
+          padding: 5px 0
+          height: 4em
+          background-color: $bg
+          .title
+            color: $dodatek
+            text-transform: uppercase
+            font:
+              size: 1em
+              weight: bold
+            .wartosc
+              padding: 8px
+              color: $kolor
+              font:
+                size: 1.3em
+              text:
+                align: center
+                decoration: underline
         .artykul
           color: rgba($kolor, 0.85)
           $pad: 1.5em
@@ -101,27 +126,54 @@ html
             font:
               size: 1.4em
               // weight: bold
-        .o-autorze
+      p.tytulp
+        padding: 0
+        margin: 0
+        text-align: center
+        color: $kolor
+        font:
+          style: italic
+          weight: bold
+          size: 1.9em
+        text:
+          transform: uppercase
+          decoration: underline
+          align: center
+      .about-author
+        width: $jedna-druga
+        float: left
+        background-color: $bg
+        // padding: 1em 0
+        img
+          border-radius: 50%
+          width: 25%
+          height: 25%
+          padding: 0 0.75em 0.75em 0.75em
           float: left
+        span
+          color: darken($kolor, 15%)
+      .share
+        width: $jedna-druga
+        float: left
+        background-color: $bg
+        .social
+          float: left
+          width: 25%
+          height: auto
           text-align: center
-          width: $jedna-trzecia
-          padding: 5px 0
-          height: 4em
-          background-color: $bg
-          .title
-            color: $dodatek
-            text-transform: uppercase
-            font:
-              size: 1em
-              weight: bold
-          .wartosc
-            padding: 8px
-            color: $kolor
-            font:
-              size: 1.3em
-            text:
-              align: center
-              decoration: underline
+          font-size: 4.4em
+          margin-top: 0.2em
+          &:hover
+            +kolory(rgb(34, 246, 204), rgb(8, 186, 114))
+          // border-radius: 50%
+        .Facebook
+          +kolory(white, rgb(59, 94, 184))
+        .Twitter
+          +kolory(white, #1dcaff)
+        .Reddit
+          +kolory(#ff4500, black)
+        .LinkedIn
+          +kolory(#006192, black)
       #podobne
         float: left
         width: $jedna-piata
