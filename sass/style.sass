@@ -3,14 +3,13 @@
 $szer-desktop: 100%
 $szer: 90%
 $szer-fullhd: 80%
-$ilekat: 5
+$naw-wys: 6em
 %wszedzie
   margin: 0 auto
 %padding-bok
   padding: 0 15px
 %padding
   padding: 15px
-$naw-wys: 6em
 %nawigacja
   float: left
   height: $naw-wys
@@ -27,12 +26,8 @@ $naw-wys: 6em
 %zaznaczenie
   +zaznaczenie($bg, $dodatek)
 
-// RWD
-%mobile
-  width: 100%
-
 html
-  background-color: rgb(210, 196, 102)
+  background-color: $bg2
   body
     margin: 0
     .clear
@@ -126,7 +121,7 @@ html
       p
         margin: 0
     .container
-      background-color: rgb(74, 120, 121)
+      background-color: $bg
       min-height: 15em
       width: $szer
       @extend %wszedzie
@@ -393,7 +388,7 @@ html
               +widescreen
                 font-size: 1.2em
     #stopka
-      background-color: rgb(161, 110, 80)
+      background-color: $bg2
       // Stopka jest na ta sama wysokosc co gorna belka
       min-height: $naw-wys
       width: $szer
