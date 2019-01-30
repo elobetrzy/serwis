@@ -24,6 +24,11 @@ $naw-wys: 6em
     background-color: lighten($bcg, 15%)
 %zaznaczenie
   +zaznaczenie($bg, $dodatek)
+
+// RWD
+%mobile
+  width: 100%
+
 html
   background-color: rgb(210, 196, 102)
   body
@@ -37,11 +42,15 @@ html
       width: $szer
       background-color: green
       @extend %wszedzie
+      +mobile
+        width: 100%
       #logo
         color: black
         width: $jedna-piata
         background-color: $kolor
         @extend %nawigacja
+        +mobile
+          width: 100%
         #logotyp
           +wymiary($naw-wys, $naw-wys)
           float: left
@@ -58,6 +67,8 @@ html
         width: $cztery-piate
         background-color: $bg
         @extend %nawigacja
+        +mobile
+          width: 100%
         .podzielenie
           width: (100% / $iloscelementow)
           height: $naw-wys
@@ -88,12 +99,15 @@ html
       width: $szer
       @extend %wszedzie
       @extend %zaznaczenie
-
+      +mobile
+        width: 100%
       #artykul
         float: left
         // padding: 20px
         width: $cztery-piate
         background-color: $bg
+        +mobile
+          width: 100%
         .tytul
           margin: 0 auto
           color: $kolor
@@ -149,6 +163,8 @@ html
             left: $pad
             right: $pad
             bottom: $pad
+          +mobile
+            padding: 0 0.5em
           font:
             size: 1.5em
           &::first-letter
@@ -195,6 +211,8 @@ html
         float: left
         background-color: $bg
         // padding: 1em 0
+        +mobile
+          width: 100%
         img
           border-radius: 50%
           width: 25%
@@ -208,6 +226,8 @@ html
         float: left
         background-color: $bg
         @extend %zaznaczenie
+        +mobile
+          width: 100%
         .social
           float: left
           width: 25%
@@ -234,6 +254,8 @@ html
         height: auto
         background-color: $bg
         text-align: center
+        +mobile
+          width: 100%
         .podobneWpisy
           color: $kolor
           margin: 0 auto
@@ -276,6 +298,8 @@ html
       min-height: $naw-wys
       width: $szer
       @extend %wszedzie
+      +mobile
+        width: 100%
       .stopka
         @extend %padding
         color: rgba($kolor, 0.4)
