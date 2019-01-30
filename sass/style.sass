@@ -8,7 +8,7 @@ $ilekat: 5
   padding: 0 15px
 %padding
   padding: 15px
-$naw-wys: 4em
+$naw-wys: 6em
 %nawigacja
   float: left
   height: $naw-wys
@@ -35,9 +35,28 @@ html
       background-color: green
       @extend %wszedzie
       #logo
+        color: black
         width: $jedna-piata
-        background-color: red
+        background-color: $kolor
+        // text-align: center
+        // background:
+        // image: url("https://www.templatesbox.com/data/free.templates/images/logo/full.preview/1163870291x6b.jpg")
+        // size: $naw-wys
+        // repeat: no-repeat
+        #logotyp
+          +wymiary($naw-wys, $naw-wys)
+          float: left
+
+
         @extend %nawigacja
+        #nazwa
+          $wielkosc-nazwy: 2em
+          display: inline-block
+          vertical-align: middle
+          margin: 0.6em 0
+          font:
+            size: $wielkosc-nazwy
+            weight: bold
       #kategorie
         width: $cztery-piate
         background-color: rgb(85, 62, 194)
