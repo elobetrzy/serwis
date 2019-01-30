@@ -41,10 +41,10 @@ html
         float: left
         // padding: 20px
         width: $cztery-piate
-        background-color: black
+        background-color: $bg
         .tytul
           margin: 0 auto
-          color: white
+          color: $kolor
           $padding: 15px
           padding:
             top: $padding
@@ -60,7 +60,7 @@ html
         .subtytul
           margin: 0
           padding: 15px
-          color: rgba(255, 255, 255, 0.6)
+          color: darken($dodatek, 10%)
           font:
             style: italic
             size: 1.3em
@@ -70,7 +70,7 @@ html
           &::first-line
             // color: green
         .artykul
-          color: rgba(255, 255, 255, 0.85)
+          color: rgba($kolor, 0.85)
           $pad: 1.5em
           padding:
             left: $pad
@@ -80,7 +80,7 @@ html
             size: 1.5em
           &::first-letter
             background-color: $dodatek
-            color: white
+            color: $bg
             text-transform: capitalize
             font-size: 2.2em
             $padd: 4px
@@ -89,15 +89,25 @@ html
               left: $padd
               right: $padd
           &::first-line
-            color: white
-
+            color: $kolor
+          .sekcja
+            background-color: $dodatek
+            color: $bg
+            margin: 15px 0
+            padding: 5px
+            text:
+              // transform: capitalize
+              align: center
+            font:
+              size: 1.4em
+              // weight: bold
         .o-autorze
           float: left
           text-align: center
           width: $jedna-trzecia
           padding: 5px 0
           height: 4em
-          background-color: black
+          background-color: $bg
           .title
             color: $dodatek
             text-transform: uppercase
@@ -106,7 +116,7 @@ html
               weight: bold
           .wartosc
             padding: 8px
-            color: white
+            color: $kolor
             font:
               size: 1.3em
             text:
@@ -125,7 +135,7 @@ html
       @extend %wszedzie
       .stopka
         @extend %padding
-        color: rgba(255, 255, 255, 0.4)
+        color: rgba($kolor, 0.4)
         text:
           align: center
           transform: uppercase
