@@ -15,12 +15,20 @@ $naw-wys: 4em
 =kolory($c, $bcg)
   color: $c
   background-color: $bcg
+=zaznaczenie($c, $bcg)
+  &::selection
+    color: $c
+    background-color: lighten($bcg, 15%)
+%zaznaczenie
+  +zaznaczenie($bg, $dodatek)
 html
   background-color: rgb(210, 196, 102)
   body
     margin: 0
     .clear
       clear: left
+    span, p, h1, h2, h3
+      @extend %zaznaczenie
     #nawigacja
       height: $naw-wys
       width: $szer
@@ -41,6 +49,8 @@ html
       min-height: 15em
       width: $szer
       @extend %wszedzie
+      @extend %zaznaczenie
+
       #artykul
         float: left
         // padding: 20px
@@ -120,6 +130,8 @@ html
             color: $bg
             margin: 15px 0
             padding: 5px
+            +zaznaczenie($dodatek, $bg)
+
             text:
               // transform: capitalize
               align: center
@@ -131,6 +143,7 @@ html
         margin: 0
         text-align: center
         color: $kolor
+
         font:
           style: italic
           weight: bold
@@ -156,6 +169,7 @@ html
         width: $jedna-druga
         float: left
         background-color: $bg
+        @extend %zaznaczenie
         .social
           float: left
           width: 25%
@@ -164,7 +178,9 @@ html
           font-size: 4.4em
           margin-top: 0.2em
           &:hover
-            +kolory(rgb(34, 246, 204), rgb(8, 186, 114))
+            +kolory($bg, $dodatek)
+          &:active
+            +kolory($dodatek, $bg)
           // border-radius: 50%
         .Facebook
           +kolory(white, rgb(59, 94, 184))
