@@ -5,7 +5,7 @@ $ilekat: 5
 %wszedzie
   margin: 0 auto
 %padding
-  padding: 0px
+  padding: 10px
 $naw-wys: 4em
 %nawigacja
   float: left
@@ -35,10 +35,19 @@ html
       min-height: 15em
       width: $szer
       @extend %wszedzie
-      @extend %padding
+      // @extend %padding
     #stopka
       background-color: rgb(161, 110, 80)
-      min-height: 5em
+      // Stopka jest na ta sama wysokosc co gorna belka
+      min-height: $naw-wys
       width: $szer
-      @extend %padding
       @extend %wszedzie
+      .stopka
+        @extend %padding
+        color: rgba(255, 255, 255, 0.4)
+        text:
+          align: center
+          transform: uppercase
+        font:
+          size: 1.3em
+          // weight: bold
