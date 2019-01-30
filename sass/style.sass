@@ -1,6 +1,8 @@
 @import rwd
 @import zmienne
-$szer: 80%
+$szer-desktop: 100%
+$szer: 90%
+$szer-fullhd: 80%
 $ilekat: 5
 %wszedzie
   margin: 0 auto
@@ -44,6 +46,14 @@ html
       @extend %wszedzie
       +mobile
         width: 100%
+      +tablet
+        width: 100%
+      +desktop
+        width: $szer-desktop
+      +widescreen
+        width: $szer
+      +fullhd
+        width: $szer-fullhd
       #logo
         color: black
         width: $jedna-piata
@@ -51,6 +61,14 @@ html
         @extend %nawigacja
         +mobile
           width: 100%
+        +tablet
+          width: 100%
+        +desktop
+          width: $jedna-czwarta
+        +widescreen
+          width: $jedna-czwarta
+        +fullhd
+          width: $jedna-piata
         #logotyp
           +wymiary($naw-wys, $naw-wys)
           float: left
@@ -62,6 +80,12 @@ html
           font:
             size: $wielkosc-nazwy
             weight: bold
+          +tablet
+            font-size: 2.5em
+            margin: 0.4em 0
+          +desktop
+            font-size: 1.75em
+            margin: 0.8em 0
       #kategorie
         $iloscelementow: 3
         width: $cztery-piate
@@ -69,6 +93,14 @@ html
         @extend %nawigacja
         +mobile
           width: 100%
+        +tablet
+          width: 100%
+        +desktop
+          width: $trzy-czwarte
+        +widescreen
+          width: $trzy-czwarte
+        +fullhd
+          width: $cztery-piate
         .podzielenie
           width: (100% / $iloscelementow)
           height: $naw-wys
@@ -101,6 +133,14 @@ html
       @extend %zaznaczenie
       +mobile
         width: 100%
+      +tablet
+        width: 100%
+      +desktop
+        width: $szer-desktop
+      +widescreen
+        width: $szer
+      +fullhd
+        width: $szer-fullhd
       #artykul
         float: left
         // padding: 20px
@@ -108,6 +148,14 @@ html
         background-color: $bg
         +mobile
           width: 100%
+        +tablet
+          width: 100%
+        +desktop
+          width: $cztery-piate
+        +widescreen
+          width: $cztery-piate
+        +fullhd
+          width: $cztery-piate
         .tytul
           margin: 0 auto
           color: $kolor
@@ -213,6 +261,14 @@ html
         // padding: 1em 0
         +mobile
           width: 100%
+        +tablet
+          width: 100%
+        +desktop
+          width: $jedna-druga
+        +widescreen
+          width: $jedna-druga
+        +fullhd
+          width: $jedna-druga
         img
           border-radius: 50%
           width: 25%
@@ -228,6 +284,14 @@ html
         @extend %zaznaczenie
         +mobile
           width: 100%
+        +tablet
+          width: 100%
+        +desktop
+          width: $jedna-druga
+        +widescreen
+          width: $jedna-druga
+        +fullhd
+          width: $jedna-druga
         .social
           float: left
           width: 25%
@@ -256,6 +320,14 @@ html
         text-align: center
         +mobile
           width: 100%
+        +tablet
+          width: 100%
+        +desktop
+          width: $jedna-piata
+        +widescreen
+          width: $jedna-piata
+        +fullhd
+          width: $jedna-piata
         .podobneWpisy
           color: $kolor
           margin: 0 auto
@@ -272,6 +344,10 @@ html
           width: $calosc
           +kolory(white, black)
           $szerokoscminiaturki: 45%
+          $szerokoscminiaturkiwidescreen: 40%
+          $szerokoscminiaturkidesktop: 35%
+          $szerokoscminiaturkitablet: 20%
+          $szerokoscminiaturkimobile: 20%
           &:first-child
             margin-top: 1em
           div.miniaturka
@@ -279,6 +355,14 @@ html
             height: $wysokosc-podobne
             float: left
             background-color: $bg
+            +mobile
+              width: $szerokoscminiaturkimobile
+            +tablet
+              width: $szerokoscminiaturkitablet
+            +desktop
+              width: $szerokoscminiaturkidesktop
+            +widescreen
+              width: $szerokoscminiaturkiwidescreen
             img
               +wymiary(100%, 100%)
           div.tytulPodobne
@@ -287,11 +371,27 @@ html
             color: $kolor
             text-align: center
             padding: 1em 0
+            +mobile
+              width: 100% - $szerokoscminiaturkimobile
+            +tablet
+              width: 100% - $szerokoscminiaturkitablet
+            +desktop
+              width: 100% - $szerokoscminiaturkidesktop
+            +widescreen
+              width: 100% - $szerokoscminiaturkiwidescreen
             span
               font:
                 size: 1.25em
                 weight: bold
               text-decoration: underline
+              +mobile
+                font-size: 1.3em
+              +tablet
+                font-size: 1.4em
+              +desktop
+                font-size: 1.2em
+              +widescreen
+                font-size: 1.2em
     #stopka
       background-color: rgb(161, 110, 80)
       // Stopka jest na ta sama wysokosc co gorna belka
@@ -300,6 +400,14 @@ html
       @extend %wszedzie
       +mobile
         width: 100%
+      +tablet
+        width: 100%
+      +desktop
+        width: $szer-desktop
+      +widescreen
+        width: $szer
+      +fullhd
+        width: $szer-fullhd
       .stopka
         @extend %padding
         color: rgba($kolor, 0.4)
