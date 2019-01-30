@@ -68,15 +68,50 @@ html
           &::first-letter
             text-transform: capitalize
           &::first-line
-            color: rgba(255, 255, 255, 0.7)
+            // color: green
         .artykul
+          color: rgba(255, 255, 255, 0.85)
+          $pad: 1.5em
+          padding:
+            left: $pad
+            right: $pad
+            bottom: $pad
+          font:
+            size: 1.5em
           &::first-letter
-            color: rgb(96, 215, 1)
+            background-color: $dodatek
+            color: white
             text-transform: capitalize
             font-size: 2.2em
+            $padd: 4px
+            padding:
+              top: $padd
+              left: $padd
+              right: $padd
+          &::first-line
+            color: white
 
         .o-autorze
-
+          float: left
+          text-align: center
+          width: $jedna-trzecia
+          padding: 5px 0
+          height: 4em
+          background-color: black
+          .title
+            color: $dodatek
+            text-transform: uppercase
+            font:
+              size: 1em
+              weight: bold
+          .wartosc
+            padding: 8px
+            color: white
+            font:
+              size: 1.3em
+            text:
+              align: center
+              decoration: underline
       #podobne
         float: left
         width: $jedna-piata
