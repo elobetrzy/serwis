@@ -1,0 +1,44 @@
+@import rwd
+@import zmienne
+$szer: 80%
+$ilekat: 5
+%wszedzie
+  margin: 0 auto
+%padding
+  padding: 0px
+$naw-wys: 4em
+%nawigacja
+  float: left
+  height: $naw-wys
+
+html
+  background-color: rgb(210, 196, 102)
+  body
+    margin: 0
+    #nawigacja
+      height: $naw-wys
+      width: $szer
+      background-color: green
+      @extend %wszedzie
+      #logo
+        width: $jedna-piata
+        background-color: red
+        @extend %nawigacja
+      #kategorie
+        width: $cztery-piate
+        background-color: rgb(85, 62, 194)
+        @extend %nawigacja
+      p
+        margin: 0
+    .container
+      background-color: rgb(74, 120, 121)
+      min-height: 15em
+      width: $szer
+      @extend %wszedzie
+      @extend %padding
+    #stopka
+      background-color: rgb(161, 110, 80)
+      min-height: 5em
+      width: $szer
+      @extend %padding
+      @extend %wszedzie
